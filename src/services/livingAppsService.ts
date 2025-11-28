@@ -10,7 +10,7 @@ import {
 
 // Living Apps REST API Configuration
 // Using Vite proxy to avoid CORS issues: /api/rest -> https://my.living-apps.de/rest
-const API_BASE_URL = 'https://corsproxy.io/?url=https://my.living-apps.de/gateway/apps';
+const API_BASE_URL = 'https://corsproxy.io/?url=https://my.living-apps.de';
 const API_KEY = '6915f82bvjhmjGdAXfmtRdIngjeJzOsrjomInMXbhmTSyNJASDLxVNRneftfuMgeYUuXSAbFSGMQrRnynpHVbJfOUfniYDFFGN';
 
 // Helper function to make API calls to Living Apps REST API
