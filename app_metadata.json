@@ -1,0 +1,803 @@
+{
+  "appgroup_id": "6914a805b7293995c67ab4d6",
+  "appgroup_name": "Fitness & Ernährungs-Tracker",
+  "apps": {
+    "uebungen": {
+      "app_id": "6914a7e259d98c952771c809",
+      "name": "Übungen",
+      "description": "Verwaltung aller verfügbaren Trainingsübungen mit Details zu Muskelgruppe, Equipment und Schwierigkeitsgrad",
+      "image": "https://my.living-apps.de/files/6914a7e259d98c952771c809/template/6914a7e259d98c952771c809/upl_id_image/6914a7e7dc383774307ac71c",
+      "createdat": "2025-11-12T16:29:42.671263",
+      "controls": {
+        "name": {
+          "identifier": "name",
+          "label": "Übungsname",
+          "type": "string",
+          "subtype": "text",
+          "fulltype": "string/text"
+        },
+        "muskelgruppe": {
+          "identifier": "muskelgruppe",
+          "label": "Muskelgruppe",
+          "type": "lookup",
+          "subtype": "select",
+          "fulltype": "lookup/select",
+          "lookup_data": {
+            "brust": "Brust",
+            "ruecken": "Rücken",
+            "beine": "Beine",
+            "schultern": "Schultern",
+            "bizeps": "Bizeps",
+            "trizeps": "Trizeps",
+            "bauch": "Bauch",
+            "ganzkoerper": "Ganzkörper"
+          }
+        },
+        "equipment": {
+          "identifier": "equipment",
+          "label": "Equipment",
+          "type": "lookup",
+          "subtype": "select",
+          "fulltype": "lookup/select",
+          "lookup_data": {
+            "langhantel": "Langhantel",
+            "kurzhantel": "Kurzhantel",
+            "maschine": "Maschine",
+            "kabelzug": "Kabelzug",
+            "bodyweight": "Bodyweight",
+            "kettlebell": "Kettlebell",
+            "resistance_band": "Resistance Band",
+            "sonstiges": "Sonstiges"
+          }
+        },
+        "schwierigkeitsgrad": {
+          "identifier": "schwierigkeitsgrad",
+          "label": "Schwierigkeitsgrad",
+          "type": "lookup",
+          "subtype": "select",
+          "fulltype": "lookup/select",
+          "lookup_data": {
+            "anfaenger": "Anfänger",
+            "fortgeschritten": "Fortgeschritten",
+            "experte": "Experte"
+          }
+        }
+      }
+    },
+    "workouts": {
+      "app_id": "6914a7e7b773d677cf3838c1",
+      "name": "Workouts",
+      "description": "Erfassung einzelner Trainingseinheiten mit Datum, Typ, Dauer und Bewertung",
+      "image": "https://my.living-apps.de/files/6914a7e7b773d677cf3838c1/template/6914a7e7b773d677cf3838c1/upl_id_image/6914a7e7aa45a4f070e48704",
+      "createdat": "2025-11-12T16:29:43.510300",
+      "controls": {
+        "datum": {
+          "identifier": "datum",
+          "label": "Datum",
+          "type": "date",
+          "subtype": "date",
+          "fulltype": "date/date"
+        },
+        "typ": {
+          "identifier": "typ",
+          "label": "Trainingstyp",
+          "type": "lookup",
+          "subtype": "select",
+          "fulltype": "lookup/select",
+          "lookup_data": {
+            "push": "Push",
+            "pull": "Pull",
+            "beine": "Beine",
+            "ganzkoerper": "Ganzkörper",
+            "oberkoerper": "Oberkörper",
+            "unterkoerper": "Unterkörper",
+            "cardio": "Cardio",
+            "sonstiges": "Sonstiges"
+          }
+        },
+        "dauer_minuten": {
+          "identifier": "dauer_minuten",
+          "label": "Dauer (Minuten)",
+          "type": "number",
+          "subtype": null,
+          "fulltype": "number",
+          "precision": null
+        },
+        "stimmung": {
+          "identifier": "stimmung",
+          "label": "Stimmung",
+          "type": "lookup",
+          "subtype": "select",
+          "fulltype": "lookup/select",
+          "lookup_data": {
+            "schlecht": "Schlecht",
+            "okay": "Okay",
+            "gut": "Gut",
+            "brutal": "Brutal"
+          }
+        },
+        "rest_day": {
+          "identifier": "rest_day",
+          "label": "Ruhetag",
+          "type": "bool",
+          "subtype": null,
+          "fulltype": "bool"
+        }
+      }
+    },
+    "ernaehrung": {
+      "app_id": "6914a7e8078cdd936a7fe8bf",
+      "name": "Ernährung",
+      "description": "Tracking von Mahlzeiten mit Makronährstoffen und Kalorien",
+      "image": "https://my.living-apps.de/files/6914a7e8078cdd936a7fe8bf/template/6914a7e8078cdd936a7fe8bf/upl_id_image/6914a7e828613ee9188e238b",
+      "createdat": "2025-11-12T16:29:44.583591",
+      "controls": {
+        "datum": {
+          "identifier": "datum",
+          "label": "Datum",
+          "type": "date",
+          "subtype": "date",
+          "fulltype": "date/date"
+        },
+        "mahlzeit_typ": {
+          "identifier": "mahlzeit_typ",
+          "label": "Mahlzeitentyp",
+          "type": "lookup",
+          "subtype": "select",
+          "fulltype": "lookup/select",
+          "lookup_data": {
+            "fruehstueck": "Frühstück",
+            "snack": "Snack",
+            "mittagessen": "Mittagessen",
+            "abendessen": "Abendessen",
+            "pre_workout": "Pre-Workout",
+            "post_workout": "Post-Workout",
+            "sonstiges": "Sonstiges"
+          }
+        },
+        "beschreibung": {
+          "identifier": "beschreibung",
+          "label": "Beschreibung",
+          "type": "string",
+          "subtype": "textarea",
+          "fulltype": "string/textarea"
+        },
+        "kalorien": {
+          "identifier": "kalorien",
+          "label": "Kalorien (kcal)",
+          "type": "number",
+          "subtype": null,
+          "fulltype": "number",
+          "precision": null
+        },
+        "protein": {
+          "identifier": "protein",
+          "label": "Protein (g)",
+          "type": "number",
+          "subtype": null,
+          "fulltype": "number",
+          "precision": null
+        },
+        "carbs": {
+          "identifier": "carbs",
+          "label": "Kohlenhydrate (g)",
+          "type": "number",
+          "subtype": null,
+          "fulltype": "number",
+          "precision": null
+        },
+        "fett": {
+          "identifier": "fett",
+          "label": "Fett (g)",
+          "type": "number",
+          "subtype": null,
+          "fulltype": "number",
+          "precision": null
+        }
+      }
+    },
+    "workout_logs": {
+      "app_id": "6914a7e8154ee0268140a731",
+      "name": "Workout-Logs",
+      "description": "Detaillierte Protokollierung einzelner Sätze mit Gewicht, Wiederholungen und RPE",
+      "image": "https://my.living-apps.de/files/6914a7e8154ee0268140a731/template/6914a7e8154ee0268140a731/upl_id_image/6914a7e858a9ba0b1171195b",
+      "createdat": "2025-11-12T16:29:44.056979",
+      "controls": {
+        "workout": {
+          "identifier": "workout",
+          "label": "Workout",
+          "type": "applookup",
+          "subtype": "select",
+          "fulltype": "applookup/select",
+          "lookup_app": "https://my.living-apps.de/rest/apps/6914a7e7b773d677cf3838c1",
+          "lookup_app_id": "6914a7e7b773d677cf3838c1"
+        },
+        "uebung": {
+          "identifier": "uebung",
+          "label": "Übung",
+          "type": "applookup",
+          "subtype": "select",
+          "fulltype": "applookup/select",
+          "lookup_app": "https://my.living-apps.de/rest/apps/6914a7e259d98c952771c809",
+          "lookup_app_id": "6914a7e259d98c952771c809"
+        },
+        "satz_nummer": {
+          "identifier": "satz_nummer",
+          "label": "Satznummer",
+          "type": "number",
+          "subtype": null,
+          "fulltype": "number",
+          "precision": null
+        },
+        "gewicht": {
+          "identifier": "gewicht",
+          "label": "Gewicht (kg)",
+          "type": "number",
+          "subtype": null,
+          "fulltype": "number",
+          "precision": null
+        },
+        "wiederholungen": {
+          "identifier": "wiederholungen",
+          "label": "Wiederholungen",
+          "type": "number",
+          "subtype": null,
+          "fulltype": "number",
+          "precision": null
+        },
+        "rpe": {
+          "identifier": "rpe",
+          "label": "RPE / Gefühl",
+          "type": "lookup",
+          "subtype": "select",
+          "fulltype": "lookup/select",
+          "lookup_data": {
+            "rpe_1": "1 - Sehr leicht",
+            "rpe_2": "2",
+            "rpe_3": "3",
+            "rpe_4": "4",
+            "rpe_5": "5 - Mittel",
+            "rpe_6": "6",
+            "rpe_7": "7",
+            "rpe_8": "8",
+            "rpe_9": "9",
+            "rpe_10": "10 - Maximal"
+          }
+        }
+      }
+    },
+    "ziele": {
+      "app_id": "6914a7ead630b6a1488ff831",
+      "name": "Ziele",
+      "description": "Definition und Verwaltung von Fitness- und Ernährungszielen",
+      "image": "https://my.living-apps.de/files/6914a7ead630b6a1488ff831/template/6914a7ead630b6a1488ff831/upl_id_image/6914a7e94d4e5020cdc85e78",
+      "createdat": "2025-11-12T16:29:45.673969",
+      "controls": {
+        "taeglich_kalorien": {
+          "identifier": "taeglich_kalorien",
+          "label": "Tägliche Kalorien (kcal)",
+          "type": "number",
+          "subtype": null,
+          "fulltype": "number",
+          "precision": null
+        },
+        "taeglich_protein": {
+          "identifier": "taeglich_protein",
+          "label": "Tägliches Protein (g)",
+          "type": "number",
+          "subtype": null,
+          "fulltype": "number",
+          "precision": null
+        },
+        "trainingstage_pro_woche": {
+          "identifier": "trainingstage_pro_woche",
+          "label": "Trainingstage pro Woche",
+          "type": "number",
+          "subtype": null,
+          "fulltype": "number",
+          "precision": null
+        },
+        "schlaf_ziel_stunden": {
+          "identifier": "schlaf_ziel_stunden",
+          "label": "Schlafziel (Stunden)",
+          "type": "number",
+          "subtype": null,
+          "fulltype": "number",
+          "precision": null
+        },
+        "status": {
+          "identifier": "status",
+          "label": "Status",
+          "type": "lookup",
+          "subtype": "select",
+          "fulltype": "lookup/select",
+          "lookup_data": {
+            "aktiv": "Aktiv",
+            "erreicht": "Erreicht",
+            "verworfen": "Verworfen"
+          }
+        },
+        "notizen": {
+          "identifier": "notizen",
+          "label": "Notizen",
+          "type": "string",
+          "subtype": "textarea",
+          "fulltype": "string/textarea"
+        }
+      }
+    },
+    "koerperdaten": {
+      "app_id": "6914a7e9764e7bbbd63bbd93",
+      "name": "Körperdaten",
+      "description": "Erfassung von Körpergewicht, Körperfettanteil und Umfängen zur Fortschrittsmessung",
+      "image": "https://my.living-apps.de/files/6914a7e9764e7bbbd63bbd93/template/6914a7e9764e7bbbd63bbd93/upl_id_image/6914a7e95208f98b92c17eef",
+      "createdat": "2025-11-12T16:29:45.133907",
+      "controls": {
+        "datum": {
+          "identifier": "datum",
+          "label": "Datum",
+          "type": "date",
+          "subtype": "date",
+          "fulltype": "date/date"
+        },
+        "gewicht_kg": {
+          "identifier": "gewicht_kg",
+          "label": "Gewicht (kg)",
+          "type": "number",
+          "subtype": null,
+          "fulltype": "number",
+          "precision": null
+        },
+        "kfa_geschaetzt": {
+          "identifier": "kfa_geschaetzt",
+          "label": "Körperfettanteil geschätzt (%)",
+          "type": "number",
+          "subtype": null,
+          "fulltype": "number",
+          "precision": null
+        },
+        "brustumfang": {
+          "identifier": "brustumfang",
+          "label": "Brustumfang (cm)",
+          "type": "number",
+          "subtype": null,
+          "fulltype": "number",
+          "precision": null
+        },
+        "taillenumfang": {
+          "identifier": "taillenumfang",
+          "label": "Taillenumfang (cm)",
+          "type": "number",
+          "subtype": null,
+          "fulltype": "number",
+          "precision": null
+        },
+        "hueftumfang": {
+          "identifier": "hueftumfang",
+          "label": "Hüftumfang (cm)",
+          "type": "number",
+          "subtype": null,
+          "fulltype": "number",
+          "precision": null
+        },
+        "armumfang": {
+          "identifier": "armumfang",
+          "label": "Armumfang (cm)",
+          "type": "number",
+          "subtype": null,
+          "fulltype": "number",
+          "precision": null
+        },
+        "beinumfang": {
+          "identifier": "beinumfang",
+          "label": "Beinumfang (cm)",
+          "type": "number",
+          "subtype": null,
+          "fulltype": "number",
+          "precision": null
+        },
+        "notizen": {
+          "identifier": "notizen",
+          "label": "Notizen",
+          "type": "string",
+          "subtype": "textarea",
+          "fulltype": "string/textarea"
+        }
+      }
+    },
+    "fitness_ernaehrungs_tracker_dashboard": {
+      "app_id": "6914a805decb543e8707a34a",
+      "name": "Fitness & Ernährungs-Tracker",
+      "description": "Los gehts! Jetzt mit deiner Anwendung arbeiten.",
+      "image": "https://my.living-apps.de/files/6914a805decb543e8707a34a/template/6914a805decb543e8707a34a/upl_id_image/6914a8058d23f119492078be",
+      "createdat": "2025-11-12T16:30:13.912453",
+      "note": "Dies ist die Dashboard/Hauptapp der Appgruppe mit umfangreichen Konfigurationsmöglichkeiten für Panels und Layouts",
+      "controls": {
+        "kategorie": {
+          "identifier": "kategorie",
+          "label": "Kategorie",
+          "type": "string",
+          "subtype": "text",
+          "fulltype": "string/text"
+        },
+        "hintergrund_farbe_1_hell": {
+          "identifier": "hintergrund_farbe_1_hell",
+          "label": "Hintergrund-Farbe 1 hell",
+          "type": "string",
+          "subtype": "text",
+          "fulltype": "string/text"
+        },
+        "hintergrund_bild_hell": {
+          "identifier": "hintergrund_bild_hell",
+          "label": "Hintergrund-Bild hell",
+          "type": "file",
+          "subtype": null,
+          "fulltype": "file"
+        },
+        "app_id": {
+          "identifier": "app_id",
+          "label": "App-ID",
+          "type": "string",
+          "subtype": "text",
+          "fulltype": "string/text"
+        },
+        "icon": {
+          "identifier": "icon",
+          "label": "Icon",
+          "type": "string",
+          "subtype": "text",
+          "fulltype": "string/text"
+        },
+        "parameter_identifizierer": {
+          "identifier": "parameter_identifizierer",
+          "label": "Parameter-Identifizierer",
+          "type": "string",
+          "subtype": "text",
+          "fulltype": "string/text"
+        },
+        "target": {
+          "identifier": "target",
+          "label": "Target",
+          "type": "string",
+          "subtype": "text",
+          "fulltype": "string/text"
+        },
+        "breite_tablet": {
+          "identifier": "breite_tablet",
+          "label": "Breite (Tablet)",
+          "type": "number",
+          "subtype": null,
+          "fulltype": "number",
+          "precision": 0
+        },
+        "hoehe_widescreen": {
+          "identifier": "hoehe_widescreen",
+          "label": "Höhe (Widescreen)",
+          "type": "number",
+          "subtype": null,
+          "fulltype": "number",
+          "precision": 0
+        },
+        "hoehe_fullhd": {
+          "identifier": "hoehe_fullhd",
+          "label": "Höhe (FullHD)",
+          "type": "number",
+          "subtype": null,
+          "fulltype": "number",
+          "precision": 0
+        },
+        "text_farbe_hell": {
+          "identifier": "text_farbe_hell",
+          "label": "Text-Farbe hell",
+          "type": "string",
+          "subtype": "text",
+          "fulltype": "string/text"
+        },
+        "hintergrund_bild_dunkel": {
+          "identifier": "hintergrund_bild_dunkel",
+          "label": "Hintergrund-Bild dunkel",
+          "type": "file",
+          "subtype": null,
+          "fulltype": "file"
+        },
+        "uebergeordnetes_panel": {
+          "identifier": "uebergeordnetes_panel",
+          "label": "Übergeordnetes Panel",
+          "type": "applookup",
+          "subtype": "select",
+          "fulltype": "applookup/select",
+          "lookup_app": "https://my.living-apps.de/rest/apps/6914a805decb543e8707a34a",
+          "lookup_app_id": "6914a805decb543e8707a34a"
+        },
+        "dummy": {
+          "identifier": "dummy",
+          "label": "Dummy",
+          "type": "string",
+          "subtype": "text",
+          "fulltype": "string/text"
+        },
+        "beschriftung": {
+          "identifier": "beschriftung",
+          "label": "Beschriftung",
+          "type": "string",
+          "subtype": "text",
+          "fulltype": "string/text"
+        },
+        "reihenfolge": {
+          "identifier": "reihenfolge",
+          "label": "Reihenfolge",
+          "type": "number",
+          "subtype": null,
+          "fulltype": "number",
+          "precision": 0
+        },
+        "hoehe_tablet": {
+          "identifier": "hoehe_tablet",
+          "label": "Höhe (Tablet)",
+          "type": "number",
+          "subtype": null,
+          "fulltype": "number",
+          "precision": 0
+        },
+        "spalte_widescreen": {
+          "identifier": "spalte_widescreen",
+          "label": "Spalte (Widescreen)",
+          "type": "number",
+          "subtype": null,
+          "fulltype": "number",
+          "precision": 0
+        },
+        "beschreibung": {
+          "identifier": "beschreibung",
+          "label": "Beschreibung",
+          "type": "string",
+          "subtype": "textarea",
+          "fulltype": "string/textarea"
+        },
+        "hoehe_desktop": {
+          "identifier": "hoehe_desktop",
+          "label": "Höhe (Desktop)",
+          "type": "number",
+          "subtype": null,
+          "fulltype": "number",
+          "precision": 0
+        },
+        "breite_widescreen": {
+          "identifier": "breite_widescreen",
+          "label": "Breite (Widescreen)",
+          "type": "number",
+          "subtype": null,
+          "fulltype": "number",
+          "precision": 0
+        },
+        "breite_fullhd": {
+          "identifier": "breite_fullhd",
+          "label": "Breite (FullHD)",
+          "type": "number",
+          "subtype": null,
+          "fulltype": "number",
+          "precision": 0
+        },
+        "hintergrund": {
+          "identifier": "hintergrund",
+          "label": "Hintergrund",
+          "type": "lookup",
+          "subtype": "select",
+          "fulltype": "lookup/select",
+          "lookup_data": {
+            "bild": "Bild",
+            "kreisfoermiger_farbverlauf": "Kreisförmiger Farbverlauf",
+            "einfache_farbe": "Einfache Farbe",
+            "linearer_farbverlauf": "Linearer Farbverlauf"
+          }
+        },
+        "text_farbe_dunkel": {
+          "identifier": "text_farbe_dunkel",
+          "label": "Text-Farbe dunkel",
+          "type": "string",
+          "subtype": "text",
+          "fulltype": "string/text"
+        },
+        "hintergrund_farbe_1_dunkel": {
+          "identifier": "hintergrund_farbe_1_dunkel",
+          "label": "Hintergrund-Farbe 1 dunkel",
+          "type": "string",
+          "subtype": "text",
+          "fulltype": "string/text"
+        },
+        "hintergrund_farbe_2_dunkel": {
+          "identifier": "hintergrund_farbe_2_dunkel",
+          "label": "Hintergrund-Farbe 2 dunkel",
+          "type": "string",
+          "subtype": "text",
+          "fulltype": "string/text"
+        },
+        "css_class": {
+          "identifier": "css_class",
+          "label": "CSS-Class",
+          "type": "string",
+          "subtype": "text",
+          "fulltype": "string/text"
+        },
+        "spalte_mobil2": {
+          "identifier": "spalte_mobil2",
+          "label": "Spalte (Mobil)",
+          "type": "number",
+          "subtype": null,
+          "fulltype": "number",
+          "precision": 0
+        },
+        "parameter_typ": {
+          "identifier": "parameter_typ",
+          "label": "Parameter-Typ",
+          "type": "lookup",
+          "subtype": "select",
+          "fulltype": "lookup/select",
+          "lookup_data": {
+            "number": "number",
+            "string": "string",
+            "html": "html",
+            "color": "color",
+            "date": "date",
+            "option_1": "bool",
+            "option_2": "int",
+            "datetime": "datetime",
+            "datedelta": "datedelta",
+            "datetimedelta": "datetimedelta",
+            "monthdelta": "monthdelta",
+            "upload": "upload",
+            "control": "control"
+          }
+        },
+        "parameter_ist_zuruecksetzbar": {
+          "identifier": "parameter_ist_zuruecksetzbar",
+          "label": "Parameter ist zurücksetzbar",
+          "type": "bool",
+          "subtype": null,
+          "fulltype": "bool"
+        },
+        "parameter_ist_pflichtfeld": {
+          "identifier": "parameter_ist_pflichtfeld",
+          "label": "Parameter ist Pflichtfeld",
+          "type": "bool",
+          "subtype": null,
+          "fulltype": "bool"
+        },
+        "parameter_optionen": {
+          "identifier": "parameter_optionen",
+          "label": "Parameter-Optionen",
+          "type": "string",
+          "subtype": "textarea",
+          "fulltype": "string/textarea"
+        },
+        "template": {
+          "identifier": "template",
+          "label": "Template",
+          "type": "string",
+          "subtype": "text",
+          "fulltype": "string/text"
+        },
+        "title": {
+          "identifier": "title",
+          "label": "Title",
+          "type": "string",
+          "subtype": "text",
+          "fulltype": "string/text"
+        },
+        "url": {
+          "identifier": "url",
+          "label": "URL",
+          "type": "string",
+          "subtype": "text",
+          "fulltype": "string/text"
+        },
+        "breite_mobil2": {
+          "identifier": "breite_mobil2",
+          "label": "Breite (Mobil)",
+          "type": "number",
+          "subtype": null,
+          "fulltype": "number",
+          "precision": 0
+        },
+        "hoehe_mobil2": {
+          "identifier": "hoehe_mobil2",
+          "label": "Höhe (Mobil)",
+          "type": "number",
+          "subtype": null,
+          "fulltype": "number",
+          "precision": 0
+        },
+        "spalte_tablet": {
+          "identifier": "spalte_tablet",
+          "label": "Spalte (Tablet)",
+          "type": "number",
+          "subtype": null,
+          "fulltype": "number",
+          "precision": 0
+        },
+        "breite_tablet2": {
+          "identifier": "breite_tablet2",
+          "label": "Breite (Desktop)",
+          "type": "number",
+          "subtype": null,
+          "fulltype": "number",
+          "precision": 0
+        },
+        "spalte_desktop": {
+          "identifier": "spalte_desktop",
+          "label": "Spalte (Desktop)",
+          "type": "number",
+          "subtype": null,
+          "fulltype": "number",
+          "precision": 0
+        },
+        "spalte_fullhd": {
+          "identifier": "spalte_fullhd",
+          "label": "Spalte (FullHD)",
+          "type": "number",
+          "subtype": null,
+          "fulltype": "number",
+          "precision": 0
+        },
+        "darstellung": {
+          "identifier": "darstellung",
+          "label": "Darstellung",
+          "type": "lookup",
+          "subtype": "select",
+          "fulltype": "lookup/select",
+          "lookup_data": {
+            "titel": "Titel",
+            "karte": "Karte"
+          }
+        },
+        "hintergrund_farbe_2_hell": {
+          "identifier": "hintergrund_farbe_2_hell",
+          "label": "Hintergrund-Farbe 2 hell",
+          "type": "string",
+          "subtype": "text",
+          "fulltype": "string/text"
+        }
+      }
+    }
+  },
+  "relationships": {
+    "workout_logs": {
+      "references": [
+        {
+          "field": "workout",
+          "references_app": "workouts",
+          "references_app_id": "6914a7e7b773d677cf3838c1"
+        },
+        {
+          "field": "uebung",
+          "references_app": "uebungen",
+          "references_app_id": "6914a7e259d98c952771c809"
+        }
+      ]
+    },
+    "fitness_ernaehrungs_tracker_dashboard": {
+      "references": [
+        {
+          "field": "uebergeordnetes_panel",
+          "references_app": "fitness_ernaehrungs_tracker_dashboard",
+          "references_app_id": "6914a805decb543e8707a34a",
+          "note": "Self-referencing für hierarchische Panel-Struktur"
+        }
+      ]
+    }
+  },
+  "metadata": {
+    "extracted_at": "2025-11-12",
+    "total_apps": 7,
+    "apps_list": [
+      "Übungen",
+      "Workouts",
+      "Ernährung",
+      "Workout-Logs",
+      "Ziele",
+      "Körperdaten",
+      "Fitness & Ernährungs-Tracker (Dashboard)"
+    ]
+  }
+}
+
